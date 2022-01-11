@@ -1115,9 +1115,10 @@ input {
 }
 
 .business .business-content .clipped-text {
+  display: inline;
   background: url(./img/redshopbag.jpg) no-repeat center center;
   background-size: cover;
-  color: #fff;
+  color: transparent;
   text-align: left;
   background-attachment: fixed;
   /* -webkit-background-clip обрезает фон элемента по контуру текста */

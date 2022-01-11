@@ -609,17 +609,25 @@ const Cm = function() {
         nav.classList.remove("is-hidden")));
 
         if (this.oldScroll > this.scrollY) {
-            gsap.timeline().to(navscr, 1, {
+            gsap.timeline().to(navscr, {
+                duration: 1.5,
+                ease: Power3.easeOut,
                 top: 0
-            }).to(burger, 1, {
+            }).to(burger, {
+                duration: 1.5,
+                ease: Power3.easeOut,
                 top: 45
             }, 0);
         } else {
-            gsap.timeline().to(navscr, 1, {
+            gsap.timeline().to(navscr, {
+                duration: 1.5,
+                ease: Power3.easeOut,
                 top: -110
-            }).to(burger, 1, {
-                    top: -50
-                }, 0);
+            }).to(burger, {
+                duration: 1.5,
+                ease: Power3.easeOut,
+                top: -50
+            }, 0);
         }
         this.oldScroll = this.scrollY;
     })

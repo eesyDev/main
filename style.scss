@@ -894,9 +894,10 @@ input {
         display: flex;
         justify-content: space-between;
         .clipped-text {
+            display: inline;
             background: url(./img/redshopbag.jpg) no-repeat center center;
             background-size: cover;
-            color: #fff;
+            color: transparent;
             text-align: left;
             background-attachment: fixed;
             /* -webkit-background-clip обрезает фон элемента по контуру текста */
@@ -3367,21 +3368,6 @@ input {
             }
         }
     }
-    .s-collage {
-        .c-heading {
-            .services {
-                .lvl {
-                    .service {
-                        .right {
-                            .title {
-                                
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
     .services {
         .c-heading {
             width: 100%;
@@ -3391,9 +3377,6 @@ input {
                         .right {
                             .linksrow {
                                 width: 80%;
-                                a {
-                                    
-                                }
                             }
                         }
                     }
