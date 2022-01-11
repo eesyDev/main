@@ -532,10 +532,10 @@ const C = function() {
             rotate: '105deg',
             background: '#d80036',
             scaleY: 1.5
-        }, .1, 0).staggerTo(listItems, .5, {
+        }, .1, 0).staggerTo(listItems, .1, {
             y: 5,
             opacity: 0
-        }, .1, 0).staggerTo(logoLetter, .3, {
+        }, .1, 0).staggerTo(logoLetter, .1, {
             opacity: 0
         }, .05, 0)),
 
@@ -554,12 +554,12 @@ const C = function() {
             background: '#232323',
             scaleX: 1,
             scaleY: 1
-        }, .1, 0).staggerTo(listItems, .5, {
+        }, .1, 0).staggerTo(listItems, .9, {
             y: 0,
             opacity: .99,
             clearProps: "all",
             ease: Power3.easeOut
-        }, .1, 0).staggerTo(logoLetter, .2, {
+        }, .1, 0).staggerTo(logoLetter, .3, {
             opacity: .99,
             clearProps: "all",
             ease: Power3.easeOut
@@ -609,15 +609,15 @@ const Cm = function() {
         nav.classList.remove("is-hidden")));
 
         if (this.oldScroll > this.scrollY) {
-            gsap.timeline().to(navscr, {
+            gsap.timeline().to(navscr, 1, {
                 top: 0
-            }).to(burger, {
+            }).to(burger, 1, {
                 top: 45
             }, 0);
         } else {
-            gsap.timeline().to(navscr, {
+            gsap.timeline().to(navscr, 1, {
                 top: -110
-            }).to(burger, {
+            }).to(burger, 1, {
                     top: -50
                 }, 0);
         }

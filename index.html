@@ -119,9 +119,30 @@
             </div>
             <div class="image">
                 <ul>
-                    <li><img class="c-src first" src="./img/menu-bg-one.png" alt="image"></li>
-                    <li><img class="c-src second" src="./img/menu-bg-two.png" alt="image"></li>
-                    <li><img class="c-src third" src="./img/menu-bg-three.png" alt="image"></li>
+                    <li>
+                        <picture>
+                            <source srcset="./img/website-img.webp" type="image/webp" media="(max-width: 475px)">
+                            <source srcset="./img/website-img.jpg" type="image/webp" media="(max-width: 475px)">
+                            <source srcset="./img/menu-bg-one.webp" type="image/webp">
+                            <img class="c-src first" src="./img/menu-bg-one.png" alt="image">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture>
+                            <source srcset="./img/menu-mobilebg-two.webp" type="image/webp" media="(max-width: 475px)">
+                            <source srcset="./img/menu-mobilebg-two.png" type="image/webp" media="(max-width: 475px)">
+                            <source srcset="./img/menu-bg-two.webp" type="image/webp">
+                            <img class="c-src second" src="./img/menu-bg-two.png" alt="image">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture>
+                            <source srcset="./img/menu-mobilebg-three.webp" type="image/webp" media="(max-width: 475px)">
+                            <source srcset="./img/menu-mobilebg-three.png" type="image/webp" media="(max-width: 475px)">
+                            <source srcset="./img/menu-bg-three.webp" type="image/webp">
+                            <img class="c-src third" src="./img/menu-bg-three.png" alt="image">
+                        </picture>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -135,13 +156,22 @@
             <div class="swiper-wrapper">
               <!-- Slides -->
                 <div class="swiper-slide">
-                    <img src="img/shopbags.jpg" alt="bag-image" data-swiper-parallax="35%">
+                    <picture>
+                        <source srcset="img/shopbags.webp" type="image/webp">
+                        <img src="img/shopbags.jpg" alt="bag-image" data-swiper-parallax="35%">
+                    </picture>
                 </div>
                 <div class="swiper-slide">
-                    <img src="img/site-img.jpg" alt="seo-image" data-swiper-parallax="35%">
+                    <picture>
+                        <source srcset="img/site-img.webp" type="image/webp">
+                        <img src="img/site-img.jpg" alt="seo-image" data-swiper-parallax="35%">
+                    </picture>
                 </div>
                 <div class="swiper-slide">
-                    <img src="img/seo.jpg" alt="site-image" data-swiper-parallax="35%">
+                    <picture>
+                        <source srcset="img/seo.webp" type="image/webp">
+                        <img src="img/seo.jpg" alt="site-image" data-swiper-parallax="35%">
+                    </picture>
                 </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -317,17 +347,26 @@
                             <div class="fake-promo swiper-container">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="./img/slider-basket-alt.jpg" alt="basket">
+                                        <picture>
+                                            <source srcset="./img/slider-basket-alt.webp" type="image/webp">
+                                            <img src="./img/slider-basket-alt.jpg" alt="image-basket">
+                                        </picture>
                                         <div class="fake-prod-title">Бамбуковая корзина</div>
                                         <div class="fake-prod-collection">Аксессуары</div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./img/slider-pendant-lighting-alt.jpg" alt="lighting">
+                                        <picture>
+                                            <source srcset="./img/slider-pendant-lighting-alt.webp" type="image/webp">
+                                            <img src="./img/slider-pendant-lighting-alt.jpg" alt="image-lighting">
+                                        </picture>
                                         <div class="fake-prod-title">Затемненный светильник</div>
                                         <div class="fake-prod-collection">Интерьер</div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./img/slider-wall-clock-alt.jpg" alt="clock">
+                                        <picture>
+                                            <source srcset="./img/slider-wall-clock-alt.webp" type="image/webp">
+                                            <img src="./img/slider-wall-clock-alt.jpg" alt="image-clock">
+                                        </picture>
                                         <div class="fake-prod-title">Настенные часы</div>
                                         <div class="fake-prod-collection">Декорации</div>
                                     </div>
@@ -342,8 +381,14 @@
                                 <i class="fa fa-search"></i>
                             </div>
                             <div class="fake-prod-image">
-                                <img src="./img/product-classic-chair-450x558.jpg" alt="chair">
-                                <img src="./img/product-pendant-lamp-2-450x558.jpg" alt="lamp">
+                                <picture>
+                                    <source srcset="./img/product-classic-chair-450x558.webp" type="image/webp">
+                                    <img src="./img/product-classic-chair-450x558.jpg" alt="chair">
+                                </picture>
+                                <picture>
+                                    <source srcset="./img/product-pendant-lamp-2-450x558.webp" type="image/webp">
+                                    <img src="./img/product-pendant-lamp-2-450x558.jpg" alt="lamp">
+                                </picture>
                             </div>
                         </div>
                     </div>
@@ -581,9 +626,24 @@
             </div>
             <div class="swiperproject">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="img/promoimg (1).png" alt=""></div>
-                    <div class="swiper-slide"><img src="img/promoimg.png" alt=""></div>
-                    <div class="swiper-slide"><img src="img/promoimg (1).png" alt=""></div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="img/promoimg (1).webp" type="image/webp">
+                            <img src="img/promoimg (1).png" alt="project-image">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="img/promoimg.webp" type="image/webp">
+                            <img src="img/promoimg.png" alt="project-image">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="img/promoimg (1).webp" type="image/webp">
+                            <img src="img/promoimg (1).png" alt="project-image">
+                        </picture>
+                    </div>
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-next">
