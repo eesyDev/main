@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 const mainSwiper = new Swiper('.swipermain', {
-    init: true,
     loop: true,
     effect: 'slide',
     parallax: true,
@@ -9,8 +8,7 @@ const mainSwiper = new Swiper('.swipermain', {
     touchRatio: .5,
     longSwipesRatio: .05,
     autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
+        delay: 5000
     },
     controller: {
         by: 'container'
@@ -41,6 +39,10 @@ const textSwiper = new Swiper('.swipertext', {
     resistanceRatio: 1.9,
     touchRatio: .5,
     longSwipesRatio: .05,
+    speed: 1500,
+    controller: {
+        by: 'container'
+    },
     breakpoints: {
         // when window width is >= 320px
         600: {
@@ -56,7 +58,6 @@ mainSwiper.controller.control = textSwiper;
 textSwiper.controller.control = mainSwiper;
 
 const projectSwiper = new Swiper('.swiperproject', {
-    init: true,
     loop: true,
     effect: 'coverflow',
     speed: 1000,
@@ -534,7 +535,7 @@ const C = function() {
         }, .1, 0).staggerTo(listItems, .5, {
             y: 5,
             opacity: 0
-        }, .1, 0).staggerTo(logoLetter, .9, {
+        }, .1, 0).staggerTo(logoLetter, .3, {
             opacity: 0
         }, .05, 0)),
 
