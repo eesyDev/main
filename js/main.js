@@ -609,22 +609,22 @@ const Cm = function() {
         nav.classList.remove("is-hidden")));
 
         if (this.oldScroll > this.scrollY) {
-            gsap.timeline().to(navscr, {
-                duration: 1.5,
+            gsap.timeline().to(navscr, .3, {
+                duration: .3,
                 ease: Power3.easeOut,
                 top: 0
-            }).to(burger, {
-                duration: 1.5,
+            }).to(burger, .3, {
+                duration: .3,
                 ease: Power3.easeOut,
                 top: 45
             }, 0);
         } else {
-            gsap.timeline().to(navscr, {
-                duration: 1.5,
+            gsap.timeline().to(navscr, .3, {
+                duration: .3,
                 ease: Power3.easeOut,
                 top: -110
-            }).to(burger, {
-                duration: 1.5,
+            }).to(burger, .3, {
+                duration: .3,
                 ease: Power3.easeOut,
                 top: -50
             }, 0);
