@@ -12,11 +12,14 @@
     <link rel="stylesheet" href="style.css">
     <title>Веб-агенство полного цикла Eesydev: создание и продвижение интернет-магазинов</title>
 </head>
-<body class="body">
+<body class="body" onload=preloadOff()>
     <h1>Создание и продвижение интернет-магазинов</h1>
     <div class="cursor"></div>
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
     <header>
-        <nav class="nav">
+        <div class="navscr">
             <a href="">
                 <div class="logo">
                     <div class="logo-sign">/</div>
@@ -29,14 +32,26 @@
                     <div class="logo-sign">v</div>
                 </div>
             </a>
-            <ul>
-                <li><a href="">Главная</a></li>
-                <li><a href="">Услуги</a></li>
-                <li><a href="">Проекты</a></li>
-                <li><a href="">О нас</a></li>
-                <li><a href="">Контакты</a></li>
-            </ul>
-        </nav>
+            <nav class="nav">
+                <ul>
+                    <li><a href="">Главная</a></li>
+                    <li><a href="">Услуги</a></li>
+                    <li><a href="">Проекты</a></li>
+                    <li><a href="">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="burger">
+            <div class="open">
+                <span id="stickone"></span>
+                <span id="sticktwo"></span>
+                <span id="stickthree"></span>
+            </div>
+            <div class="close">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </header>
     
     <aside class="menu">
@@ -48,7 +63,6 @@
                             <li><a href="">Главная</a></li>
                             <li><a href="">Услуги</a></li>
                             <li><a href="">Проекты</a></li>
-                            <li><a href="">О нас</a></li>
                             <li><a href="">Контакты</a></li>
                         </ul>
                     </div>
@@ -62,6 +76,7 @@
                             <li><a href="">Лендинги</a></li>
                             <li><a href="">Сайты-визитки</a></li>
                             <li><a href="">Все проекты</a></li>
+                            <li><a href="">Связаться</a></li>
                         </ul>
                     </div>
                     <div class="subnav">
@@ -78,9 +93,6 @@
                                 <a target="_blank" class="i-behance" href="https://behance.com/">Behance</a>
                             </li>
                             <li>
-                                <a target="_blank" class="i-github" href="https://github.com/">Github</a>
-                            </li>
-                            <li>
                                 <a target="_blank" class="i-github" href="https://github.com/">Telegram</a>
                             </li>
                             <li>
@@ -90,15 +102,15 @@
                     </div>
                     <div class="language">                       
                         <ul>
-                            <li><h3 class="m-heading">Выбор языка</h3></li>
+                            <li><h3 class="m-heading">Документы</h3></li>
                             <li class="lang-item lang-item-first current-lang">
-                                <a lang="ru" hreflang="ru" href="">Русский</a>
+                                <a href="">Скачать прайс</a>
                             </li>
                             <li class="lang-item">
-                                <a lang="kz" hreflang="kz" href="https://stockdutchdesign.com/">Казахский</a>
+                                <a href="">Пройти брифинг</a>
                             </li>
                             <li class="lang-item lang-item-2 lang-item-en lang-item-first current-lang">
-                                <a lang="en-GB" hreflang="en-GB" href="https://stockdutchdesign.com/en/home/">English</a>
+                                <a href="">Договор оферты</a>
                             </li>                           
                         </ul>
                     </div>
@@ -107,28 +119,15 @@
             </div>
             <div class="image">
                 <ul>
-                    <li><img class="c-src" src="./img/anete-lusina-zwsHjakE_iI-unsplash.jpg" alt=""></li>
-                    <li><img class="c-src" src="./img/hans-peter-gauster-3y1zF4hIPCg-unsplash.jpg" alt=""></li>
-                    <li><img class="c-src" src="./img/jackson-so-_t-l5FFH8VA-unsplash.jpg" alt=""></li>
-                    <li><img class="c-src" src="./img/olaf-val-UTk9cXzYWAg-unsplash.jpg" alt=""></li>
-                    <li><img class="c-src" src="./img/sigmund-9aSH7CauB9Y-unsplash.jpg" alt=""></li>
-                    <li><img class="c-src" src="./img/hal-gatewood-tZc3vjPCk-Q-unsplash.jpg" alt=""></li>
+                    <li><img class="c-src first" src="./img/menu-bg-one.png" alt="image"></li>
+                    <li><img class="c-src second" src="./img/menu-bg-two.png" alt="image"></li>
+                    <li><img class="c-src third" src="./img/menu-bg-three.png" alt="image"></li>
                 </ul>
             </div>
         </div>
     </aside>
 
-    <div class="burger">
-        <div class="open">
-            <span id="stickone"></span>
-            <span id="sticktwo"></span>
-            <span id="stickthree"></span>
-        </div>
-        <div class="close">
-            <span></span>
-            <span></span>
-        </div>
-    </div>
+    
 
     <section class="promo">
         <div class="swipermain">
@@ -156,23 +155,23 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="slide-content">
-                        <div class="slide-title">Рабочие интернет-магазины на Wordpress, Insales или Tilda</div>
+                        <div class="slide-title">Рабочие магазины на актуальных платформах</div>
                         <div class="slide-text">Отвечай всем требованиям современного рынка и выводи свой бизнес в онлайн. Выбери то, что подходит именно тебе</div>
-                        <a class="slide-button modal-open" href=""><button>Связаться</button></a>
+                        <a class="slide-button modal-open"><button>Связаться</button></a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="slide-content">
                         <div class="slide-title">Разработка магазина + SEO на 3 мес.</div>
                         <div class="slide-text">Выгодное решение для хорошего старта</div>
-                        <a class="slide-button" href=""><button>Подробнее</button></a>
+                        <a class="slide-button"><button>Подробнее</button></a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="slide-content">
                         <div class="slide-title">SEO продвижение сайтов</div>
                         <div class="slide-text">Масштабируй свой бизнес с максимальной конверсией и минимальными затратами. </div>
-                        <a class="slide-button modal-open" href=""><button>Смотреть</button></a>
+                        <a class="slide-button modal-open"><button>Смотреть</button></a>
                     </div>
                 </div>
             </div>
@@ -398,17 +397,15 @@
                                 <div class="service">
                                     <img src="img/gears.svg" alt="icon">
                                     <div class="right">
-                                        <div class="title">Разработка</div>
+                                        <div class="title">Разработка <span></span></div>
                                         <div class="text">Интернет-магазинов на платформах<br> <span>Wordpress</span>, <span>Insales</span> или <span>Tilda</span> под ключ</div>
-                                        <span class="line"></span>
                                     </div>
                                 </div>
                                 <div class="service">
                                     <img src="img/paint-brush.svg" alt="icon">
                                     <div class="right">
-                                        <div class="title">Дизайн</div>
+                                        <div class="title">Дизайн <span></span></div>
                                         <div class="text">Для вашего будущего сайта включая дизайн на мобильных устройствах</div>
-                                        <span class="line"></span>
                                     </div>
                                 </div>
                             </div>
@@ -424,9 +421,8 @@
                                 <div class="service">
                                     <img src="img/found.svg" alt="icon">
                                     <div class="right">
-                                        <div class="title">SEO</div>
+                                        <div class="title">SEO <span></span></div>
                                         <div class="text">Продвижение вашего магазина в поисковой выдаче <span>Google</span> и <span>Яндекс</span></div>
-                                        <span class="line"></span>
                                     </div>
                                 </div>
                             </div>
@@ -438,14 +434,14 @@
     </section>
 
     <section class="contacts">
-        <div class="container">
-            <div class="shadow-title">
+        <div class="shadow-title">
                 <h2 class="big-title">Контакты</h2>
                 <h3 class="title-tag">
                     <span class="red-line"></span>
                     Контакты
                 </h3>
             </div>
+        <div class="container">
             <div class="contacts-wrap">
                 <div class="left">
                     <div class="title">Расскажите о своем проекте, узнайте стоимость<br> и сроки оставив заявку</div>
@@ -490,34 +486,32 @@
     <aside class="modal-rev">
         <div class="modal-review modal-review-closed">
             <div class="modal-overlay close-modal"></div>
-            <div class="container">
-                <div class="review">
-                    <h2 class="title">Связаться с нами</h2>
-                    <div class="close-modal">
-                        <span></span><span></span>
-                    </div>
-                    <form action="">
-                        <div class="level">
-                            <div class="input">
-                                <input type="text" name="name" id="">
-                                <label for="name">Имя</label>
-                            </div>
-                            <div class="input">
-                                <input type="email" name="email" id="">
-                                <label for="email">Почта</label>
-                            </div>
-                        </div>
-                        <div class="level">
-                            <div class="input">
-                                <input type="tel" name="phone" id="">
-                                <label for="phone">Номер</label>
-                            </div>
-                            <div class="input submit">
-                                <button>Отправить</button>
-                            </div>
-                        </div>  
-                    </form>
+            <div class="review">
+                <h2 class="title">Связаться с нами</h2>
+                <div class="close-modal">
+                    <span></span><span></span>
                 </div>
+                <form action="">
+                    <div class="level">
+                        <div class="input">
+                            <input type="text" name="name" id="">
+                            <label for="name">Имя</label>
+                        </div>
+                        <div class="input">
+                            <input type="email" name="email" id="">
+                            <label for="email">Почта</label>
+                        </div>
+                    </div>
+                    <div class="level">
+                        <div class="input">
+                            <input type="tel" name="phone" id="">
+                            <label for="phone">Номер</label>
+                        </div>
+                        <div class="input submit">
+                            <button>Отправить</button>
+                        </div>
+                    </div>  
+                </form>
             </div>
         </div>
     </aside>
@@ -546,7 +540,6 @@
                         <a href="" class="link">Главная</a>
                         <a href="" class="link">Услуги</a>
                         <a href="" class="link">Проекты</a>
-                        <a href="" class="link">О нас</a>
                         <a href="" class="link">Контакты</a>
                     </div>
                 </div>
@@ -555,7 +548,6 @@
                     <div class="links">
                         <a href="" class="link">Facebook</a>
                         <a href="" class="link">Instagram</a>
-                        <a href="" class="link">Github</a>
                         <a href="" class="link">Behance</a>
                         <a href="" class="link">Telegram</a>
                         <a href="" class="link">Whatsapp</a>
@@ -577,18 +569,114 @@
     </footer>
 
 
-
-    <section class="page-services">
-        <div class="container">
-            <h1>Услуги</h1>
+    <div class="indiv-page-project">
+        <section>
+            <h1>Проект</h1>
             <div class="shadow-title">
-                <h2 class="big-title">Услуги</h2>
+                <h2 class="big-title">Project</h2>
                 <h3 class="title-tag">
                     <span class="red-line"></span>
-                    Услуги
+                    Saint Martin
                 </h3>
             </div>
+            <div class="swiperproject">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/promoimg (1).png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/promoimg.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/promoimg (1).png" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next">
+                    <img id="arrowbody" src="img/arrowbody.svg" alt="arrow">
+                    <img id="arrowhead" src="img/arrowhead.svg" alt="arrow">
+                </div>
+            </div>
+            <div class="projectinfo">
+                <a href="#" class="project-link">
+                    Перейти на сайт
+                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.7585 2.61006C27.241 -0.870698 32.9068 -0.869978 36.3888 2.61197C39.8704 6.09321 39.8704 11.759 36.3891 15.2417L28.12 23.5099C26.4339 25.1967 24.1911 26.1258 21.8056 26.1258C19.42 26.1258 17.1772 25.1967 15.4904 23.5099L18.0337 20.9669C19.041 21.9744 20.3806 22.5293 21.8053 22.5293C23.23 22.5293 24.5694 21.9744 25.5767 20.9669L33.8456 12.6987C35.9249 10.6186 35.9251 7.23451 33.8456 5.15522C31.7662 3.07593 28.3837 3.07473 26.303 5.15187L26.3035 5.15235L20.7927 10.6642L18.2495 8.12143L23.7592 2.61077L23.7585 2.61006Z" fill="#D1D1D1"/>
+                        <path d="M5.15469 33.8452C7.23424 35.9247 10.6182 35.9252 12.6982 33.8464L18.2089 28.334L20.7524 30.877L15.2415 36.3894C13.501 38.1296 11.2135 39 8.92705 39C6.63961 39.0002 4.35264 38.1296 2.61117 36.3884C-0.870349 32.906 -0.870349 27.24 2.61093 23.7578L10.8793 15.49C14.3613 12.0076 20.0271 12.0078 23.5096 15.49L20.9661 18.033C18.8865 15.9532 15.5024 15.9532 13.4223 18.033L5.15445 26.3008C3.07513 28.3805 3.07513 31.7652 5.15469 33.8452Z" fill="#D1D1D1"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="container">
+                <div class="ending-logos">
+                    <img class="logo" src="img/Insales.svg" alt="icon">
+                    <img class="logo" src="img/Wordpress.svg" alt="icon">
+                    <img class="logo" src="img/Tilda.svg" alt="icon">
+                </div>
+                <div class="ending-high">
+                    <h2 class="ending-title">Выбери то, что подходит именно тебе и закажи разработку своего интернет-магазина прямо сейчас</h2>
+                    <button class="ending-cta modal-open">Заказать</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="container">
             <div class="high">
+                <div class="left">
+                    <a href="">
+                        <div class="logo">
+                            <div class="logo-sign">/</div>
+                            <div class="logo-sign">e</div>
+                            <div class="logo-sign">e</div>
+                            <div class="logo-sign">s</div>
+                            <div class="logo-sign">y</div>
+                            <div class="logo-sign">d</div>
+                            <div class="logo-sign">e</div>
+                            <div class="logo-sign">v</div>
+                        </div>
+                    </a>
+                    <div class="since">© 2021, веб-агентство eesydev<br>Все права защищены</div>
+                </div>
+                <div class="middle">
+                    <div class="title">Навигация</div>
+                    <div class="links">
+                        <a href="" class="link">Главная</a>
+                        <a href="" class="link">Услуги</a>
+                        <a href="" class="link">Проекты</a>
+                        <a href="" class="link">Контакты</a>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="title">Социальные сети</div>
+                    <div class="links">
+                        <a href="" class="link">Facebook</a>
+                        <a href="" class="link">Instagram</a>
+                        <a href="" class="link">Behance</a>
+                        <a href="" class="link">Telegram</a>
+                        <a href="" class="link">Whatsapp</a>
+                    </div>
+                </div>
+                <div class="bid">
+                    <a class="lead modal-open">Оставить заявку</a>
+                    <div class="links">
+                        <a href="mailto:eesydev@gmail.com" class="link">eesydev@gmail.com</a>
+                        <a href="tel:+77055676622" class="link">+7 705 567 6622</a>
+                    </div>
+                    <address>
+                        Алматы, ул. Байзакова, 42, 2 этаж, 403<br>
+                        <a href="">Смотреть на карте</a>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="page-services">
+        <h1>Услуги</h1>
+        <div class="shadow-title">
+            <h2 class="big-title">Услуги</h2>
+            <h3 class="title-tag">
+                <span class="red-line"></span>
+                Услуги
+            </h3>
+        </div>
+        <div class="container">
+            <section class="high">
                 <div class="left">
                     <div class="first-col">
                         <div class="service">
@@ -636,15 +724,17 @@
                 <div class="right">
                     <img src="img/unclesam-engcolor.svg" alt="image">
                 </div>
+            </section>
+        </div>
+        <section class="comparison">
+            <div class="shadow-title">
+                <h2 class="big-title">Сравнение</h2>
+                <h3 class="title-tag">
+                    <span class="red-line"></span>
+                    Сравнение платформ
+                </h3>
             </div>
-            <div class="comparison">
-                <div class="shadow-title">
-                    <h2 class="big-title">Сравнение</h2>
-                    <h3 class="title-tag">
-                        <span class="red-line"></span>
-                        Сравнение платформ
-                    </h3>
-                </div>
+            <div class="container">
                 <div class="comparisonw">
                     <div class="comparisonw-name">
                         <div class="rowstroke"><!-- FREE SPOT --></div>
@@ -666,61 +756,198 @@
                     <div class="comparisonw-content">
                         <div class="column">
                             <div class="column-title">Insales</div>
-                            <div class="column-adv">от 8 475тг/мес</div>
-                            <div class="column-adv">от 80 000тг</div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv">Есть возможность</div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv">Есть возможность</div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Абонентсткая плата</span>  
+                                <span class="column-adv-text">от 8 475тг/мес</span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Стоимость разработки</span>  
+                                <span class="column-adv-text">от 80 000тг</span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Редактирование товаров с админ.панели</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Визуальное редактирование сайта без кода</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Настройка базового SEO в админ.панели</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Интеграция с CRM</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Интеграция с сервисами аналитики</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Интеграция с виртуальным складом</span>  
+                                <span class="column-adv-text">Есть возможность</span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Интеграция с почтовыми службами</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Онлайн оплата</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Покупка с Kaspi</span>  
+                                <span class="column-adv-text">Есть возможность</span></div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Наличие блога</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Тех.поддержка</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Обширная база знаний</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
                         </div>
                         <div class="column">
                             <div class="column-title">Wordpress</div>
-                            <div class="column-adv">Свободно</div>
-                            <div class="column-adv">от 120 000тг</div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv">Есть возможность</div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv">Есть возможность</div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv">Есть возможность</div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv"><img src="img/cross.svg" alt="icon"></div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Абонентсткая плата</span>  
+                                <span class="column-adv-text">Свободно</span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Стоимость разработки</span>  
+                                <span class="column-adv-text">от 120 000тг</span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Редактирование товаров с админ.панели</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Визуальное редактирование сайта без кода</span>  
+                                <span class="column-adv-text">Есть возможность</span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Настройка базового SEO в админ.панели</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Интеграция с CRM</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Интеграция с сервисами аналитики</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Интеграция с виртуальным складом</span>  
+                                <span class="column-adv-text">Есть возможность</span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Интеграция с почтовыми службами</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Онлайн оплата</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Покупка с Kaspi</span>  
+                                <span class="column-adv-text">Есть возможность</span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Наличие блога</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Тех.поддержка</span>  
+                                <span class="column-adv-text"><img src="img/cross.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Обширная база знаний</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
                         </div>
                         <div class="column">
                             <div class="column-title">Tilda</div>
-                            <div class="column-adv">от 3 000тг/мес</div>
-                            <div class="column-adv">от 80 000тг</div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv">Есть возможность</div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv">Есть возможность</div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
-                            <div class="column-adv"><img src="img/checkmark.svg" alt="icon"></div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Абонентсткая плата</span>  
+                                <span class="column-adv-text">от 3 000тг/мес</span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Стоимость разработки</span>  
+                                <span class="column-adv-text">от 80 000тг</span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Редактирование товаров с админ.панели</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Визуальное редактирование сайта без кода</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Настройка базового SEO в админ.панели</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Интеграция с CRM</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Интеграция с сервисами аналитики</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Интеграция с виртуальным складом</span>  
+                                <span class="column-adv-text">Есть возможность</span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Интеграция с почтовыми службами</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Онлайн оплата</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Покупка с Kaspi</span>  
+                                <span class="column-adv-text">Есть возможность </span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Наличие блога</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Тех.поддержка</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
+                            <div class="column-adv">
+                                <span class="column-adv-name">Обширная база знаний</span>  
+                                <span class="column-adv-text"><img src="img/checkmark.svg" alt="icon"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-        </div>
-    </section>
+        </section>
+        <section class="ending">
+            <div class="container">
+                <div class="ending-logos">
+                    <img class="logo" src="img/Insales.svg" alt="icon">
+                    <img class="logo" src="img/Wordpress.svg" alt="icon">
+                    <img class="logo" src="img/Tilda.svg" alt="icon">
+                </div>
+                <div class="ending-high">
+                    <h2 class="ending-title">Выбери то, что подходит именно тебе и закажи разработку своего интернет-магазина прямо сейчас</h2>
+                    <button class="ending-cta modal-open">Заказать</button>
+                </div>
+            </div>
+        </section>
+    </div>
     <footer class="footer">
         <div class="container">
             <div class="high">
@@ -745,7 +972,6 @@
                         <a href="" class="link">Главная</a>
                         <a href="" class="link">Услуги</a>
                         <a href="" class="link">Проекты</a>
-                        <a href="" class="link">О нас</a>
                         <a href="" class="link">Контакты</a>
                     </div>
                 </div>
@@ -754,7 +980,6 @@
                     <div class="links">
                         <a href="" class="link">Facebook</a>
                         <a href="" class="link">Instagram</a>
-                        <a href="" class="link">Github</a>
                         <a href="" class="link">Behance</a>
                         <a href="" class="link">Telegram</a>
                         <a href="" class="link">Whatsapp</a>
@@ -881,7 +1106,6 @@
                         <a href="" class="link">Главная</a>
                         <a href="" class="link">Услуги</a>
                         <a href="" class="link">Проекты</a>
-                        <a href="" class="link">О нас</a>
                         <a href="" class="link">Контакты</a>
                     </div>
                 </div>
@@ -890,7 +1114,6 @@
                     <div class="links">
                         <a href="" class="link">Facebook</a>
                         <a href="" class="link">Instagram</a>
-                        <a href="" class="link">Github</a>
                         <a href="" class="link">Behance</a>
                         <a href="" class="link">Telegram</a>
                         <a href="" class="link">Whatsapp</a>
@@ -984,7 +1207,6 @@
                         <a href="" class="link">Главная</a>
                         <a href="" class="link">Услуги</a>
                         <a href="" class="link">Проекты</a>
-                        <a href="" class="link">О нас</a>
                         <a href="" class="link">Контакты</a>
                     </div>
                 </div>
@@ -993,7 +1215,6 @@
                     <div class="links">
                         <a href="" class="link">Facebook</a>
                         <a href="" class="link">Instagram</a>
-                        <a href="" class="link">Github</a>
                         <a href="" class="link">Behance</a>
                         <a href="" class="link">Telegram</a>
                         <a href="" class="link">Whatsapp</a>
@@ -1013,6 +1234,15 @@
             </div>
         </div>
     </footer>
+    <script>
+        const preloadOff = function() {
+            const preloader = document.querySelector('.preloader'),
+                body = document.querySelector('body');
+            
+            body.style.overflowY = 'scroll';
+            preloader.style.display = 'none';
+        } 
+    </script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>

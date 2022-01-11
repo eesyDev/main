@@ -1,9 +1,13 @@
+document.addEventListener('DOMContentLoaded', () => {
 const mainSwiper = new Swiper('.swipermain', {
+    init: true,
     loop: true,
     effect: 'slide',
     parallax: true,
     speed: 1500,
-    allowTouchMove: false,
+    resistanceRatio: 1.9,
+    touchRatio: .5,
+    longSwipesRatio: .05,
     autoplay: {
         delay: 5000,
         disableOnInteraction: false
@@ -17,20 +21,81 @@ const mainSwiper = new Swiper('.swipermain', {
     },
     navigation: {
         nextEl: '.swiper-button-next'
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        600: {
+            allowTouchMove: false
+        },
+        260: {
+            allowTouchMove: true
+        }
     }
+    
 });
 
 const textSwiper = new Swiper('.swipertext', {
     loop: true,
     effect: 'slide',
     parallax: true,
-    allowTouchMove: false
+    resistanceRatio: 1.9,
+    touchRatio: .5,
+    longSwipesRatio: .05,
+    breakpoints: {
+        // when window width is >= 320px
+        600: {
+            allowTouchMove: false
+        },
+        260: {
+            allowTouchMove: true
+        }
+    }
 });
 
 mainSwiper.controller.control = textSwiper;
 textSwiper.controller.control = mainSwiper;
 
-
+const projectSwiper = new Swiper('.swiperproject', {
+    init: true,
+    loop: true,
+    effect: 'coverflow',
+    speed: 1000,
+    centeredSlides: true,
+    slidesPerView: 3,
+    spaceBetween: 100,
+    allowTouchMove: false,
+    coverflowEffect: {
+        rotate: 0,
+        depth: 10,
+        modifier: 1,
+        scale: .6,
+        slideShadows: false,
+        stretch: 5
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        type: "fraction"
+    },
+    navigation: {
+        nextEl: '.swiper-button-next'
+    },
+    breakpoints: {
+        // when window width is >= 640px
+        992: {
+            allowTouchMove: false,
+            slidesPerView: 3
+        },
+        260: {
+            allowTouchMove: true,
+            slidesPerView: 1
+        }
+      }
+});
+    
 let menuItem = document.querySelectorAll(".menu__item-text");
 let menuImage = document.querySelectorAll(".menu__item-image");
 
@@ -67,19 +132,7 @@ menuItem.forEach((el) => {
 });
 
 
-const slideArrow = document.querySelector('.swiper-button-next'),
-    arrowBody = document.querySelector('#arrowbody'),
-    arrowHead = document.querySelector('#arrowhead');
-    
-slideArrow.addEventListener('mouseover', () => {
-    arrowBody.style.transition = 'all .3s ease-in';
-    arrowHead.style.transition = 'all .3s ease-in';
-});
-
 let projectImg = document.querySelector('.project-image');
-
-
-document.addEventListener('DOMContentLoaded', () => {
     function burgers() {
         const burger = document.querySelector('.burger'),
         burgerStckThree = document.querySelector('#stickthree'),
@@ -88,7 +141,8 @@ document.addEventListener('DOMContentLoaded', () => {
             closeBurger = burger.querySelector('.close'),
             spanOpen = openBurger.querySelectorAll('span'),
             spanClose = closeBurger.querySelectorAll('span'),
-            menuLinks = menu.querySelectorAll('li a');
+            menuLinks = menu.querySelectorAll('li a'),
+            windowWidth = window.innerWidth;
 
             function addPointer() {
                 burger.style.pointerEvents = ""
@@ -133,31 +187,37 @@ document.addEventListener('DOMContentLoaded', () => {
             scaleX: 0,
             force3D: !0
         });
-        burger.addEventListener("click", ()=>{
-            menu.classList.contains("is-visible") ? burgerCloseAnimation() : burgerOpenAnimation()
+        burger.addEventListener("click", () => {
+            if (menu.classList.contains("is-visible")) {
+                burgerOpenAnimation();
+            } else {
+                burgerCloseAnimation();
+            };
         });
         [...menuLinks].forEach(t=>{
-            t.addEventListener("click", ()=>{
+            t.addEventListener("click", () => {
                 menu.classList.remove("is-visible"),
                 burgerAnimation()
             })
         });
     };
     burgers()
-});
+
 
 var Ke = function() {
     const logo = document.querySelector(".logo"),
-          menu = document.querySelector(".menu"),
-          burger = document.querySelector(".burger"),
-          menuImg = menu.querySelector(".image"),
-          src = menu.querySelectorAll(".c-src"),
-          listItemLink = menu.querySelectorAll("li a"),
-          cNavListItem = menu.querySelectorAll(".c-nav li"),
-          subnavListItem = menu.querySelectorAll(".subnav li"),
-          cContainer = menu.querySelector(".c-container"),
-          lang = menu.querySelector(".language"),
-          links = menu.querySelectorAll("a");
+        navscr = document.querySelector('.navscr'),
+        menu = document.querySelector(".menu"),
+        burger = document.querySelector(".burger"),
+        menuImg = menu.querySelector(".image"),
+        src = menu.querySelectorAll(".c-src"),
+        listItemLink = menu.querySelectorAll("li a"),
+        cNavListItem = menu.querySelectorAll(".c-nav li"),
+        subnavListItem = menu.querySelectorAll(".subnav li"),
+        cContainer = menu.querySelector(".c-container"),
+        lang = menu.querySelector(".language"),
+        links = menu.querySelectorAll("a");
+
     function u() {
         gsap.timeline().set(cNavListItem, {
             y: -50,
@@ -188,6 +248,7 @@ var Ke = function() {
             e[Math.floor(Math.random() * e.length)].style.display = "block"
         }(),
         document.querySelector('body').style.overflowY = "hidden";
+
         menu.classList.add("is-visible");
         gsap.timeline().to(cNavListItem, {
             y: 0,
@@ -230,7 +291,8 @@ var Ke = function() {
     function f() {
         const e = document.querySelector(".a-container");
         menu.classList.remove("is-visible");
-    document.querySelector('body').style.overflowY = "auto";
+        document.querySelector('body').style.overflowY = "auto";
+
         gsap.timeline().set(e, {
             y: 0
         }, 0).to(menu, {
@@ -272,7 +334,7 @@ var Ke = function() {
     ),
     burger.addEventListener("click", ()=>{
         menu.classList.contains("is-visible") ? f() : d();
-    })
+    });
 };
 
 Ke();
@@ -300,7 +362,6 @@ const collage = document.querySelector('.s-collage'),
     n = collage.querySelector(".c-shape"),
     coreValues = document.querySelector(".s-core-values"),
     sUpdate = document.querySelector(".s-update");
-
 
 const image0 = image[0], 
       image1 = image[1], 
@@ -447,6 +508,7 @@ const swiperFake = new Swiper(".fake-promo", {
 
 const C = function() {
     const nav = document.querySelector(".nav"), 
+            navscr = document.querySelector('.navscr'),
             burger = document.querySelector(".burger"),
             burgerStckThree = document.querySelector('#stickthree'),
             listItems = nav.querySelectorAll("li"),
@@ -461,7 +523,9 @@ const C = function() {
             x: "7.5vw",
             duration: 1,
             ease: Power3.easeOut
-        }, 0).staggerTo(burgerStckThree, .5, {
+        }, 0).to(navscr, {
+            display: 'none'
+        }, .5).staggerTo(burgerStckThree, .5, {
             x: 5,
             y: 1,
             rotate: '105deg',
@@ -480,6 +544,8 @@ const C = function() {
             gsap.timeline().to(burger, {
                 duration: 1,
             x: "0"
+        }, 0).to(navscr, {
+            display: 'flex'
         }, 0).staggerTo(burgerStckThree, .5, {
             x: 0,
             y: 0,
@@ -501,61 +567,63 @@ const C = function() {
     })
 };
 
-const CSm = function() {
-    const nav = document.querySelector(".nav"), 
-            burger = document.querySelector(".burger"),
-            burgerStckThree = document.querySelector('#stickthree'),
-            listItems = nav.querySelectorAll("li"),
-            logo = document.querySelector('.logo'),
-            logoLetter = logo.querySelectorAll('.logo-sign'),
-            n = new gsap.timeline();
+
+const Cm = function() {
+    const nav = document.querySelector(".nav"),
+        navscr = document.querySelector('.navscr'),
+        burger = document.querySelector(".burger"),
+        listItems = nav.querySelectorAll("li"),
+        logo = document.querySelector('.logo'),
+        logoLetter = logo.querySelectorAll('.logo-sign'),
+        n = new gsap.timeline();
+        
     window.addEventListener('scroll', () => {
         let e = window.pageYOffset ,
                 scrollPrev = 0;
-        e > 20 && e > scrollPrev ? (nav.classList.contains("is-hidden") || (nav.style.pointerEvents = "none",
-        gsap.timeline().to(burger, {
-            x: "3vw",
-            duration: 1,
-            ease: Power3.easeOut
-        }, 0).staggerTo(burgerStckThree, .5, {
-            x: 5,
-            y: 1,
-            rotate: '105deg',
-            background: '#d80036',
-            scaleY: 1.5
-        }, .1, 0).staggerTo(listItems, .5, {
+        e > 10 && e > scrollPrev ? (nav.classList.contains("is-hidden") || (nav.style.pointerEvents = "none"/*,*/
+        /*gsap.timeline().to(listItems, .5, {
             y: 5,
             opacity: 0
         }, .1, 0).staggerTo(logoLetter, .9, {
             opacity: 0
-        }, .05, 0)),
+        }, .05, 0).staggerTo(navscr, .1, {
+            background: '#fff',
+            boxShadow: '0 0 25px rgb(0 0 0 / 50%)'
+        }, .05, 0)*/),
 
-        nav.classList.add("is-hidden")) : e <= 20 && (nav.style.pointerEvents = "all",
+        nav.classList.add("is-hidden")) : e <= 10 && (nav.style.pointerEvents = "all",
         
         nav.classList.contains("is-hidden") && (
-            gsap.timeline().to(burger, {
-                duration: 1,
-            x: "0"
-        }, 0).staggerTo(burgerStckThree, .5, {
-            x: 0,
-            y: 0,
-            rotate: '0deg',
-            background: '#232323',
-            scaleX: 1,
-            scaleY: 1
-        }, .1, 0).staggerTo(listItems, .5, {
+            /*gsap.timeline().to(listItems, .5, {
             y: 0,
             opacity: .99,
             clearProps: "all",
             ease: Power3.easeOut
-        }, .1, 0).staggerTo(logoLetter, .2, {
-            opacity: .99,
-            clearProps: "all",
-            ease: Power3.easeOut
-        }, .1, 0), 
+        }, .1, 0).staggerTo(logoLetter, .9, {
+            opacity: .99
+        }, .05, 0).to(navscr, {
+            background: 'none',
+            boxShadow: 'none'
+        }, .05, 0),*/
         nav.classList.remove("is-hidden")));
+
+        if (this.oldScroll > this.scrollY) {
+            gsap.timeline().to(navscr, {
+                top: 0
+            }).to(burger, {
+                top: 45
+            }, 0);
+        } else {
+            gsap.timeline().to(navscr, {
+                top: -110
+            }).to(burger, {
+                    top: -50
+                }, 0);
+        }
+        this.oldScroll = this.scrollY;
     })
 };
+
 
 const contactInputs = document.querySelectorAll('.input input'),
       contactLabels = document.querySelectorAll('.input label');
@@ -591,20 +659,25 @@ function modalWindow() {
 };
 modalWindow();
 
-function changeBigLetters () {
-    const changeLetters = () => {
-        const bigLetters = document.querySelector('.clipped-text');
-        bigLetters.innerHTML = 'E-COMMERCE <br> <span>ADVANTAGES</span>'
-    }
-    
+function changeMedia () {
+    const uncleSamImg = document.querySelector('.page-services .high .right')
+
     window.addEventListener('resize', (e) => {
         const  windowWidth = window.innerWidth;
         const bigLetters = document.querySelector('.clipped-text');
     
         if (windowWidth < 1199) {
-            changeLetters()      
+            bigLetters.innerHTML = 'E-COMMERCE <br> <span>ADVANTAGES</span>'
+        } else if (windowWidth < 475) {
+            bigLetters.innerHTML = 'E-COMMERCE <br> <span>ADVANTAGES</span>';
         } else {
-            bigLetters.innerHTML = 'E- &emsp; &ensp; ADV<br>COMM&nbsp;ANT<br>ERCE AGES'
+            bigLetters.innerHTML = 'E- &emsp; &ensp; ADV<br>COMM&nbsp;ANT<br>ERCE AGES';
+        }
+
+        if (windowWidth < 768) {
+            uncleSamImg.innerHTML = '<img src="img/unclesam.svg" alt="image">';
+        } else {
+            uncleSamImg.innerHTML = '<img src="img/unclesam-engcolor.svg" alt="image">';
         }
     });
     
@@ -613,19 +686,24 @@ function changeBigLetters () {
         const bigLetters = document.querySelector('.clipped-text');
     
         if (windowWidth < 1199) {
-            changeLetters()      
+            bigLetters.innerHTML = 'E-COMMERCE <br> <span>ADVANTAGES</span>'    
         } else {
             bigLetters.innerHTML = 'E- &emsp; &ensp; ADV<br>COMM&nbsp;ANT<br>ERCE AGES'
         }
+
+        if (windowWidth < 768) {
+            uncleSamImg.innerHTML = '<img src="img/unclesam.svg" alt="image">';
+        } else {
+            uncleSamImg.innerHTML = '<img src="img/unclesam-engcolor.svg" alt="image">';
+        }
+
+        if (windowWidth < 475) {
+            Cm();
+        } else {
+            C();
+        }
     });
 };
-changeBigLetters();
+changeMedia();
 
-// const changeBurger = () => {
-//     const  windowWidth = window.innerWidth;
-//     windowWidth > 991 ? C() : CSm();
-// }
-
-// changeBurger();
-
-C();
+});
