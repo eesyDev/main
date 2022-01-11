@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
 const mainSwiper = new Swiper('.swipermain', {
     loop: true,
     effect: 'slide',
@@ -8,7 +7,8 @@ const mainSwiper = new Swiper('.swipermain', {
     touchRatio: .5,
     longSwipesRatio: .05,
     autoplay: {
-        delay: 5000
+        delay: 5000,
+        disableOnInteraction: true
     },
     controller: {
         by: 'container'
@@ -57,6 +57,8 @@ const textSwiper = new Swiper('.swipertext', {
 mainSwiper.controller.control = textSwiper;
 textSwiper.controller.control = mainSwiper;
 
+
+// document.addEventListener('DOMContentLoaded', () => {
 const projectSwiper = new Swiper('.swiperproject', {
     loop: true,
     effect: 'coverflow',
@@ -75,7 +77,7 @@ const projectSwiper = new Swiper('.swiperproject', {
     },
     autoplay: {
         delay: 3000,
-        disableOnInteraction: false
+        disableOnInteraction: true
     },
     pagination: {
         el: ".swiper-pagination",
@@ -608,28 +610,28 @@ const Cm = function() {
         }, .05, 0),*/
         nav.classList.remove("is-hidden")));
 
-        if (this.oldScroll > this.scrollY) {
-            gsap.timeline().to(navscr, .3, {
-                duration: .3,
-                ease: Power3.easeOut,
-                top: 0
-            }).to(burger, .3, {
-                duration: .3,
-                ease: Power3.easeOut,
-                top: 45
-            }, 0);
-        } else {
-            gsap.timeline().to(navscr, .3, {
-                duration: .3,
-                ease: Power3.easeOut,
-                top: -110
-            }).to(burger, .3, {
-                duration: .3,
-                ease: Power3.easeOut,
-                top: -50
-            }, 0);
-        }
-        this.oldScroll = this.scrollY;
+        // if (this.oldScroll > this.scrollY) {
+        //     gsap.timeline().to(navscr, .3, {
+        //         duration: .3,
+        //         ease: Power3.easeOut,
+        //         top: 0
+        //     }).to(burger, .3, {
+        //         duration: .3,
+        //         ease: Power3.easeOut,
+        //         top: 45
+        //     }, 0);
+        // } else {
+        //     gsap.timeline().to(navscr, .3, {
+        //         duration: .3,
+        //         ease: Power3.easeOut,
+        //         top: -110
+        //     }).to(burger, .3, {
+        //         duration: .3,
+        //         ease: Power3.easeOut,
+        //         top: -50
+        //     }, 0);
+        // }
+        // this.oldScroll = this.scrollY;
     })
 };
 
@@ -690,8 +692,9 @@ function changeMedia () {
         }
     });
     
+    const  windowWidth = window.innerWidth;
     window.addEventListener('load', (e) => {
-        const  windowWidth = window.innerWidth;
+        
         const bigLetters = document.querySelector('.clipped-text');
     
         if (windowWidth < 1199) {
@@ -706,13 +709,13 @@ function changeMedia () {
             uncleSamImg.innerHTML = '<img src="img/unclesam-engcolor.svg" alt="image">';
         }
 
-        if (windowWidth < 475) {
-            Cm();
-        } else {
-            C();
-        }
+        
     });
+
+    if (windowWidth > 475) {
+        C();
+    }
 };
 changeMedia();
 
-});
+// });
