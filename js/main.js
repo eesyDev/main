@@ -1,17 +1,19 @@
+const windowWidth = window.innerWidth;
 const mainSwiper = new Swiper('.swipermain', {
     loop: true,
     effect: 'slide',
     parallax: true,
     speed: 1500,
+    allowTouchMove: false,
     resistanceRatio: 1.9,
     touchRatio: .5,
     longSwipesRatio: .05,
+    controller: {
+        by: 'container'
+    },
     autoplay: {
         delay: 5000,
         disableOnInteraction: true
-    },
-    controller: {
-        by: 'container'
     },
     pagination: {
         el: ".swiper-pagination",
@@ -19,21 +21,14 @@ const mainSwiper = new Swiper('.swipermain', {
     },
     navigation: {
         nextEl: '.swiper-button-next'
-    },
-    breakpoints: {
-        // when window width is >= 320px
-        600: {
-            allowTouchMove: false
-        },
-        260: {
-            allowTouchMove: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: true
-            }
-        }
     }
 });
+
+if(windowWidth <= 475) {
+    mainSwiper.autoplay.stop();
+} else {
+    mainSwiper.autoplay.start();
+};
 
 const textSwiper = new Swiper('.swipertext', {
     loop: true,
@@ -43,12 +38,16 @@ const textSwiper = new Swiper('.swipertext', {
     touchRatio: .5,
     longSwipesRatio: .05,
     speed: 1500,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: true
+    },
     controller: {
         by: 'container'
     },
     breakpoints: {
         // when window width is >= 320px
-        600: {
+        475: {
             allowTouchMove: false
         },
         260: {
@@ -59,6 +58,12 @@ const textSwiper = new Swiper('.swipertext', {
 
 mainSwiper.controller.control = textSwiper;
 textSwiper.controller.control = mainSwiper;
+
+if(windowWidth <= 475) {
+    textSwiper.autoplay.start();
+} else {
+    textSwiper.autoplay.stop();
+};
 
 
 // document.addEventListener('DOMContentLoaded', () => {

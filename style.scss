@@ -926,10 +926,10 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
         .clipped-text {
             display: inline-block;
             background: url(./img/redshopbag.jpg) no-repeat center center;
-            background-size: cover;
+            // background-size: cover;
             color: rgba(0, 0, 0, 0.0001);
             text-align: left;
-            background-attachment: initial;
+            background-attachment: fixed;
 
             // background: linear-gradient(left top, right top, from(#305cea),color-stop(50%,#773de2),to(#e95370));
             // background: -webkit-gradient(linear,left top,right top,from(#305cea),color-stop(50%,#773de2),to(#e95370));
