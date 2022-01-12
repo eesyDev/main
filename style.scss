@@ -659,6 +659,9 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
                         border-bottom: 1px solid #232323;
                         outline: none;
                         transition: all .1s ease-in;
+                        border-radius: 0;
+                        -webkit-appearance: none !important;
+                        -webkit-border-radius: 0 !important;
                         &:focus ~ label {
                             transform: translateY(-180%);
                             font-size: 14px;
@@ -1546,6 +1549,9 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
                             border-bottom: 1px solid #232323;
                             outline: none;
                             transition: all .1s ease-in;
+                            border-radius: 0;
+                            -webkit-appearance: none !important;
+                            -webkit-border-radius: 0 !important;
                             &:focus ~ label {
                                 transform: translateY(-180%);
                                 font-size: 14px;
@@ -1562,19 +1568,19 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
                             transition: all .1s ease-in;
                         }
                     }
-                    .inputfile {
-                        width: 48%;
-                        height: 60px;
-                        input {
-                            visibility: hidden;
-                            &::before {
-                                content: 'Прикрепить файл';
-                                display: block;
-                                color:rgb(117, 117, 117);
-                                background: #000;
-                            }
-                        }
-                    }
+                    // .inputfile {
+                    //     width: 48%;
+                    //     height: 60px;
+                    //     input {
+                    //         visibility: hidden;
+                    //         &::before {
+                    //             content: 'Прикрепить файл';
+                    //             display: block;
+                    //             color:rgb(117, 117, 117);
+                    //             background: #000;
+                    //         }
+                    //     }
+                    // }
                 }
                 textarea {
                     margin-top: 20px;
@@ -1584,6 +1590,9 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
                     outline: none;
                     padding-top: 35px;
                     transition: all .3s ease-in;
+                    border-radius: 0;
+                    -webkit-appearance: none !important;
+                    -webkit-border-radius: 0 !important;
                     &::placeholder {
                         font-family: 'Source Sans Pro', sans-serif;
                         font-size: 16px;
@@ -3486,7 +3495,7 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
         padding-left: 20px;
     }
     .modal-review .review {
-        padding: 50px 40px;
+        padding: 30px 40px;
     }
     .menu {
         .columns {

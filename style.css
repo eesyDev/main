@@ -735,6 +735,9 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   outline: none;
   -webkit-transition: all .1s ease-in;
   transition: all .1s ease-in;
+  border-radius: 0;
+  -webkit-appearance: none !important;
+  -webkit-border-radius: 0 !important;
 }
 
 .modal-review .review form .level .input input:focus ~ label {
@@ -1883,6 +1886,9 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   outline: none;
   -webkit-transition: all .1s ease-in;
   transition: all .1s ease-in;
+  border-radius: 0;
+  -webkit-appearance: none !important;
+  -webkit-border-radius: 0 !important;
 }
 
 .contacts-wrap .left form .level .input input:focus ~ label {
@@ -1904,22 +1910,6 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   transition: all .1s ease-in;
 }
 
-.contacts-wrap .left form .level .inputfile {
-  width: 48%;
-  height: 60px;
-}
-
-.contacts-wrap .left form .level .inputfile input {
-  visibility: hidden;
-}
-
-.contacts-wrap .left form .level .inputfile input::before {
-  content: 'Прикрепить файл';
-  display: block;
-  color: #757575;
-  background: #000;
-}
-
 .contacts-wrap .left form textarea {
   margin-top: 20px;
   border: none;
@@ -1929,6 +1919,9 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   padding-top: 35px;
   -webkit-transition: all .3s ease-in;
   transition: all .3s ease-in;
+  border-radius: 0;
+  -webkit-appearance: none !important;
+  -webkit-border-radius: 0 !important;
 }
 
 .contacts-wrap .left form textarea::-webkit-input-placeholder {
@@ -3975,7 +3968,7 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
     padding-left: 20px;
   }
   .modal-review .review {
-    padding: 50px 40px;
+    padding: 30px 40px;
   }
   .menu .columns {
     top: 0;
