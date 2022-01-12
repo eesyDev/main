@@ -1043,6 +1043,30 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
           justify-content: space-between;
 }
 
+.business .business-content .clipped {
+  position: relative;
+  width: 60%;
+}
+
+.business .business-content .clipped video {
+  width: 100%;
+}
+
+.business .business-content .clipped .clip-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 10em;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.business .business-content .clipped .clip-text rect {
+  fill: white;
+  -webkit-mask: url(#mask);
+          mask: url(#mask);
+}
+
 .business .business-content .clipped-text {
   display: inline;
   background: url(./img/redshopbag.jpg) no-repeat center center;
@@ -3968,7 +3992,7 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
     padding-left: 20px;
   }
   .modal-review .review {
-    padding: 30px 40px;
+    padding: 50px 25px;
   }
   .menu .columns {
     top: 0;

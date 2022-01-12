@@ -675,15 +675,15 @@ function changeMedia () {
 
     window.addEventListener('resize', (e) => {
         const  windowWidth = window.innerWidth;
-        const bigLetters = document.querySelector('.clipped-text');
+        // const bigLetters = document.querySelector('.clipped-text');
     
-        if (windowWidth < 1199) {
-            bigLetters.innerHTML = 'E-COMMERCE <br> <span>ADVANTAGES</span>'
-        } else if (windowWidth < 475) {
-            bigLetters.innerHTML = 'E-COMMERCE <br> <span>ADVANTAGES</span>';
-        } else {
-            bigLetters.innerHTML = 'E- &emsp; &ensp; ADV<br>COMM&nbsp;ANT<br>ERCE AGES';
-        }
+        // if (windowWidth < 1199) {
+        //     bigLetters.innerHTML = 'E-COMMERCE <br> <span>ADVANTAGES</span>'
+        // } else if (windowWidth < 475) {
+        //     bigLetters.innerHTML = 'E-COMMERCE <br> <span>ADVANTAGES</span>';
+        // } else {
+        //     bigLetters.innerHTML = 'E- &emsp; &ensp; ADV<br>COMM&nbsp;ANT<br>ERCE AGES';
+        // }
 
         if (windowWidth < 768) {
             uncleSamImg.innerHTML = '<img src="img/unclesam.svg" alt="image">';
@@ -697,11 +697,11 @@ function changeMedia () {
         
         const bigLetters = document.querySelector('.clipped-text');
     
-        if (windowWidth < 1199) {
-            bigLetters.innerHTML = 'E-COMMERCE <br> <span>ADVANTAGES</span>'    
-        } else {
-            bigLetters.innerHTML = 'E- &emsp; &ensp; ADV<br>COMM&nbsp;ANT<br>ERCE AGES'
-        }
+        // if (windowWidth < 1199) {
+        //     bigLetters.innerHTML = 'E-COMMERCE <br> <span>ADVANTAGES</span>'    
+        // } else {
+        //     bigLetters.innerHTML = 'E- &emsp; &ensp; ADV<br>COMM&nbsp;ANT<br>ERCE AGES'
+        // }
 
         if (windowWidth < 768) {
             uncleSamImg.innerHTML = '<img src="img/unclesam.svg" alt="image">';
