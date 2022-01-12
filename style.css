@@ -1069,11 +1069,22 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
 
 .business .business-content .clipped-text {
   display: inline-block;
-  background: url(./img/redshopbag.jpg) no-repeat center center;
-  background-size: cover;
   color: rgba(0, 0, 0, 0.0001);
   text-align: left;
   background-attachment: fixed;
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(top, right), color-stop(from(#305cea)), color-stop(color-stop(50%, #773de2)), to(to(#e95370)));
+  background: linear-gradient(left top, right top, from(#305cea), color-stop(50%, #773de2), to(#e95370));
+  background: -webkit-gradient(linear, left top, right top, from(#305cea), color-stop(50%, #773de2), to(#e95370));
+  background: -webkit-gradient(linear, left top, right top, from(#305cea), color-stop(50%, #773de2), to(#e95370));
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#305cea), color-stop(0.5, #773de2), to(#e95370));
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-color: initial;
   /* -webkit-background-clip обрезает фон элемента по контуру текста */
   -webkit-text-fill-color: transparent;
   /* переопределяет цвет текста с белого на прозрачный в браузерах на webkit */
@@ -1092,6 +1103,19 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
 
 .business .business-content .clipped-text.clipped-text-2 {
   display: none;
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(top, right), color-stop(from(#305cea)), color-stop(color-stop(50%, #773de2)), to(to(#e95370)));
+  background: linear-gradient(left top, right top, from(#305cea), color-stop(50%, #773de2), to(#e95370));
+  background: -webkit-gradient(linear, left top, right top, from(#305cea), color-stop(50%, #773de2), to(#e95370));
+  background: -webkit-gradient(linear, left top, right top, from(#305cea), color-stop(50%, #773de2), to(#e95370));
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#305cea), color-stop(0.5, #773de2), to(#e95370));
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-color: initial;
 }
 
 .business .business-content .business-advantages {
@@ -3234,7 +3258,7 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
     width: 100%;
   }
   .business .business-content .clipped-text.clipped-text-2 {
-    display: block;
+    display: inline-block;
   }
   .business .business-content .business-advantages {
     width: 100%;
