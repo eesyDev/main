@@ -106,6 +106,12 @@ input {
     -webkit-text-fill-color: #000;
 }
 
+textarea, input[type="text"], input[type="button"], input[type="submit"] {
+    -webkit-appearance: none !important;
+    -webkit-border-radius: 0 !important;
+    border-radius: 0;
+}
+
 // /* MAIN        MAIN        MAIN        MAIN        MAIN        MAIN          MAIN */
 
 
@@ -902,7 +908,12 @@ input {
             background-attachment: fixed;
             /* -webkit-background-clip обрезает фон элемента по контуру текста */
             -webkit-text-fill-color: transparent; /* переопределяет цвет текста с белого на прозрачный в браузерах на webkit */
+            -moz-text-fill-color: transparent;
+            -ms-text-fill-color: transparent;
+            text-fill-color: transparent;
             -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -ms-background-clip: text;
             background-clip: text;
             font-size: 150px;
             line-height: 0.8;
