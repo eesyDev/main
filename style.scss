@@ -923,9 +923,8 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
             }
         }
         
-
         .clipped-text {
-            display: inline;
+            display: inline-block;
             background: url(./img/redshopbag.jpg) no-repeat center center;
             background-size: cover;
             color: rgba(0, 0, 0, 0.0001);
@@ -935,7 +934,6 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
             -webkit-text-fill-color: transparent; /* переопределяет цвет текста с белого на прозрачный в браузерах на webkit */
             -moz-text-fill-color: transparent;
             -ms-text-fill-color: transparent;
-            text-fill-color: $darkred;
             -webkit-background-clip: text;
             -moz-background-clip: text;
             -ms-background-clip: text;
@@ -946,11 +944,22 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
             width: 58%;
             overflow: hidden;
             white-space: nowrap;
-            
         }
         .clipped-text.clipped-text-2 {
             display: none;
         }
+        // @supports not (background-clip: text) {
+        //     .clipped-text {
+        //         background-clip: content-box;
+        //         color: $red;
+        //         -webkit-text-fill-color: $red;
+        //         -moz-text-fill-color: $red;
+        //         -ms-text-fill-color: $red;
+        //         -webkit-background-clip: content-box;
+        //         -moz-background-clip: content-box;
+        //         -ms-background-clip: content-box;
+        //     }
+        // }
         .business-advantages {
             width: 38%;
             padding-right: 5%;

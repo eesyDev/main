@@ -1068,7 +1068,7 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
 }
 
 .business .business-content .clipped-text {
-  display: inline;
+  display: inline-block;
   background: url(./img/redshopbag.jpg) no-repeat center center;
   background-size: cover;
   color: rgba(0, 0, 0, 0.0001);
@@ -1079,7 +1079,6 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   /* переопределяет цвет текста с белого на прозрачный в браузерах на webkit */
   -moz-text-fill-color: transparent;
   -ms-text-fill-color: transparent;
-  text-fill-color: #b02a33;
   -webkit-background-clip: text;
   -ms-background-clip: text;
   background-clip: text;
