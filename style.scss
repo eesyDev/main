@@ -935,7 +935,7 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
             -webkit-text-fill-color: transparent; /* переопределяет цвет текста с белого на прозрачный в браузерах на webkit */
             -moz-text-fill-color: transparent;
             -ms-text-fill-color: transparent;
-            text-fill-color: transparent;
+            text-fill-color: $darkred;
             -webkit-background-clip: text;
             -moz-background-clip: text;
             -ms-background-clip: text;
@@ -947,6 +947,9 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
             overflow: hidden;
             white-space: nowrap;
             
+        }
+        .clipped-text.clipped-text-2 {
+            display: none;
         }
         .business-advantages {
             width: 38%;
@@ -2578,6 +2581,7 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
         .business-content {
             flex-direction: column;
             .clipped-text {
+                display: none;
                 text-align: left;
                 width: 100%;
                 font-size: 125px;
@@ -2586,6 +2590,9 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
                     text-align: right;
                     width: 100%;
                 }
+            }
+            .clipped-text.clipped-text-2 {
+                display: block;
             }
             .business-advantages {
                 width: 100%;

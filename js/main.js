@@ -26,10 +26,13 @@ const mainSwiper = new Swiper('.swipermain', {
             allowTouchMove: false
         },
         260: {
-            allowTouchMove: true
+            allowTouchMove: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: true
+            }
         }
     }
-    
 });
 
 const textSwiper = new Swiper('.swipertext', {
@@ -672,19 +675,9 @@ modalWindow();
 
 function changeMedia () {
     const uncleSamImg = document.querySelector('.page-services .high .right')
+    const  windowWidth = window.innerWidth;
 
     window.addEventListener('resize', (e) => {
-        const  windowWidth = window.innerWidth;
-        // const bigLetters = document.querySelector('.clipped-text');
-    
-        // if (windowWidth < 1199) {
-        //     bigLetters.innerHTML = 'E-COMMERCE <br> <span>ADVANTAGES</span>'
-        // } else if (windowWidth < 475) {
-        //     bigLetters.innerHTML = 'E-COMMERCE <br> <span>ADVANTAGES</span>';
-        // } else {
-        //     bigLetters.innerHTML = 'E- &emsp; &ensp; ADV<br>COMM&nbsp;ANT<br>ERCE AGES';
-        // }
-
         if (windowWidth < 768) {
             uncleSamImg.innerHTML = '<img src="img/unclesam.svg" alt="image">';
         } else {
@@ -692,28 +685,21 @@ function changeMedia () {
         }
     });
     
-    const  windowWidth = window.innerWidth;
     window.addEventListener('load', (e) => {
-        
-        const bigLetters = document.querySelector('.clipped-text');
-    
-        // if (windowWidth < 1199) {
-        //     bigLetters.innerHTML = 'E-COMMERCE <br> <span>ADVANTAGES</span>'    
-        // } else {
-        //     bigLetters.innerHTML = 'E- &emsp; &ensp; ADV<br>COMM&nbsp;ANT<br>ERCE AGES'
-        // }
-
         if (windowWidth < 768) {
             uncleSamImg.innerHTML = '<img src="img/unclesam.svg" alt="image">';
         } else {
             uncleSamImg.innerHTML = '<img src="img/unclesam-engcolor.svg" alt="image">';
         }
-
-        
     });
 
     if (windowWidth > 475) {
         C();
+
+        const swiperwrap = document.querySelectorAll('.swiper-wrapper');
+        swiperwrap.addEventListener('click', () => {
+            swiper.autoplay.stop();
+        });
     }
 };
 changeMedia();
