@@ -1046,6 +1046,7 @@ input {
   -webkit-text-fill-color: transparent;
   /* переопределяет цвет текста с белого на прозрачный в браузерах на webkit */
   -webkit-background-clip: text;
+  background-clip: text;
   font-size: 150px;
   line-height: 0.8;
   font-weight: 900;
