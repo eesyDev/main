@@ -2616,7 +2616,7 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
         .business-content {
             flex-direction: column;
             .clipped-text {
-                display: none;
+                // display: none;
                 text-align: left;
                 width: 100%;
                 font-size: 125px;
@@ -2627,7 +2627,7 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
                 }
             }
             .clipped-text.clipped-text-2 {
-                display: inline-block;
+                // display: inline-block;
             }
             .business-advantages {
                 width: 100%;
