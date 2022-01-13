@@ -923,27 +923,19 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
             }
         }
         
+        @supports not (background-attachment: fixed) {
+            .clipped-text {
+                background-attachment: initial;
+            }
+        }
         .clipped-text {
-            display: inline-block;
+            display: flex;
+            flex-wrap: wrap;
             background: url(./img/redshopbag.jpg) no-repeat center center;
-            // background-size: cover;
+            background-size: cover;
             color: rgba(0, 0, 0, 0.0001);
             text-align: left;
             background-attachment: fixed;
-
-            // background: linear-gradient(left top, right top, from(#305cea),color-stop(50%,#773de2),to(#e95370));
-            // background: -webkit-gradient(linear,left top,right top,from(#305cea),color-stop(50%,#773de2),to(#e95370));
-            // background: -webkit-gradient(linear,left top,right top,from(#305cea),color-stop(50%,#773de2),to(#e95370));
-            // background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgb(48, 92, 234)), color-stop(0.5, rgb(119, 61, 226)), to(rgb(233, 83, 112)));
-            // background-position-x: initial;
-            // background-position-y: initial;
-            // background-size: initial;
-            // background-repeat-x: initial;
-            // background-repeat-y: initial;
-            // background-attachment: initial;
-            // background-origin: initial;
-            // background-color: initial;
-
             /* -webkit-background-clip обрезает фон элемента по контуру текста */
             -webkit-text-fill-color: transparent; /* переопределяет цвет текста с белого на прозрачный в браузерах на webkit */
             -moz-text-fill-color: transparent;
@@ -952,40 +944,27 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
             -moz-background-clip: text;
             -ms-background-clip: text;
             background-clip: text;
-            font-size: 150px;
             line-height: 0.8;
             font-weight: 900;
             width: 58%;
             overflow: hidden;
             white-space: nowrap;
+            .high {
+                font-size: 7.8vw;
+                display: inline-block;
+            }
+            .mid {
+                font-size: 9vw;
+                display: inline-block;
+                small {
+                    font-size: 6vw;
+                }
+            }
+            .low {
+                font-size: 12vw;
+                display: inline-block;
+            }
         }
-        .clipped-text.clipped-text-2 {
-            display: none;
-            background: linear-gradient(left top, right top, from(#305cea),color-stop(50%,#773de2),to(#e95370));
-            background: -webkit-gradient(linear,left top,right top,from(#305cea),color-stop(50%,#773de2),to(#e95370));
-            background: -webkit-gradient(linear,left top,right top,from(#305cea),color-stop(50%,#773de2),to(#e95370));
-            background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgb(48, 92, 234)), color-stop(0.5, rgb(119, 61, 226)), to(rgb(233, 83, 112)));
-            background-position-x: initial;
-            background-position-y: initial;
-            background-size: initial;
-            background-repeat-x: initial;
-            background-repeat-y: initial;
-            background-attachment: initial;
-            background-origin: initial;
-            background-color: initial;
-        }
-        // @supports not (background-clip: text) {
-        //     .clipped-text {
-        //         background-clip: content-box;
-        //         color: $red;
-        //         -webkit-text-fill-color: $red;
-        //         -moz-text-fill-color: $red;
-        //         -ms-text-fill-color: $red;
-        //         -webkit-background-clip: content-box;
-        //         -moz-background-clip: content-box;
-        //         -ms-background-clip: content-box;
-        //     }
-        // }
         .business-advantages {
             width: 38%;
             padding-right: 5%;
@@ -2401,9 +2380,6 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
             font-size: 28px;
         }
     }
-    .business .business-content .clipped-text {
-        font-size: 135px;
-    }
     .s-update-inner .left {
         width: 70%;
     }
@@ -2411,9 +2387,6 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
 
 @media screen and (max-width: 1399px) {
     .business .business-content {
-        .clipped-text {
-            font-size: 125px;
-        }
         .business-advantages {
             padding-right: 2%;
             .advantage-title, .advantage-text {
@@ -2491,9 +2464,6 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
         }
     }
     .business .business-content {
-        .clipped-text {
-            font-size: 115px;
-        }
         .business-advantages {
             padding-right: 0;
             .advantage-title, .advantage-text {
@@ -2616,18 +2586,10 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
         .business-content {
             flex-direction: column;
             .clipped-text {
-                // display: none;
-                text-align: left;
                 width: 100%;
-                font-size: 125px;
-                span {
-                    display: block;
-                    text-align: right;
-                    width: 100%;
+                .high {
+                    font-size: 11vw;
                 }
-            }
-            .clipped-text.clipped-text-2 {
-                // display: inline-block;
             }
             .business-advantages {
                 width: 100%;
@@ -2781,6 +2743,32 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
             width: 30%;
         }
     }
+    .business {
+        .business-content {
+            .clipped-text {
+                // background: url(./img/redshopbag.jpg) no-repeat center center;
+                // background-size: cover;
+                // color: rgba(0, 0, 0, 0.0001);
+                // text-align: left;
+                // background-attachment: initial;
+
+                // /* -webkit-background-clip обрезает фон элемента по контуру текста */
+                // -webkit-text-fill-color: transparent; /* переопределяет цвет текста с белого на прозрачный в браузерах на webkit */
+                // -moz-text-fill-color: transparent;
+                // -ms-text-fill-color: transparent;
+                // -webkit-background-clip: text;
+                // -moz-background-clip: text;
+                // -ms-background-clip: text;
+                // background-clip: text;
+                .mid {
+                    font-size: 8vw;
+                }
+                .low {
+                    font-size: 12vw;
+                }
+            }
+        }
+    }
     .projects {
         .menu-links {
             width: 30%;
@@ -2850,13 +2838,6 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
             width: 40%;
             .swiper-wrapper .swiper-slide .slide-content {
                 padding: 40px;
-            }
-        }
-    }
-    .business {
-        .business-content {
-            .clipped-text {
-                font-size: 105px;
             }
         }
     }
@@ -2983,11 +2964,6 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
     }
     .business {
         padding: 150px 0 70px;
-        .business-content {
-            .clipped-text {
-                font-size: 95px;
-            }
-        }
     }
     .projects {
         .menu-links {
@@ -3158,9 +3134,6 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
     }
     .business {
         .business-content {
-            .clipped-text {
-                font-size: 85px;
-            }
             .business-advantages {
                 flex-direction: column;
                 align-items: flex-start;
@@ -3414,9 +3387,6 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
                     width: 100%;
                 }
             }
-            .clipped-text {
-                font-size: 70px;
-            }
         }
     }
     .projects {
@@ -3647,7 +3617,15 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
         padding: 120px 0 70px;
         .business-content {
             .clipped-text {
-                font-size: 50px;
+                .high {
+                    font-size: 14vw;
+                }
+                .mid {
+                    font-size: 9.9vw;
+                }
+                .low {
+                    font-size: 14vw;
+                }
             }
         }
     }
@@ -3822,6 +3800,15 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
     .nav {
         .logo {
             left: 15vw;
+        }
+    }
+    .business {
+        .business-content {
+            .clipped-text {
+                .mid {
+                    font-size: 9.5vw;
+                }
+            }
         }
     }
     .projects {

@@ -1067,9 +1067,20 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
           mask: url(#mask);
 }
 
+@supports not (background-attachment: fixed) {
+  .business .business-content .clipped-text {
+    background-attachment: initial;
+  }
+}
+
 .business .business-content .clipped-text {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background: url(./img/redshopbag.jpg) no-repeat center center;
+  background-size: cover;
   color: rgba(0, 0, 0, 0.0001);
   text-align: left;
   background-attachment: fixed;
@@ -1081,7 +1092,6 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   -webkit-background-clip: text;
   -ms-background-clip: text;
   background-clip: text;
-  font-size: 150px;
   line-height: 0.8;
   font-weight: 900;
   width: 58%;
@@ -1089,21 +1099,23 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   white-space: nowrap;
 }
 
-.business .business-content .clipped-text.clipped-text-2 {
-  display: none;
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(top, right), color-stop(from(#305cea)), color-stop(color-stop(50%, #773de2)), to(to(#e95370)));
-  background: linear-gradient(left top, right top, from(#305cea), color-stop(50%, #773de2), to(#e95370));
-  background: -webkit-gradient(linear, left top, right top, from(#305cea), color-stop(50%, #773de2), to(#e95370));
-  background: -webkit-gradient(linear, left top, right top, from(#305cea), color-stop(50%, #773de2), to(#e95370));
-  background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#305cea), color-stop(0.5, #773de2), to(#e95370));
-  background-position-x: initial;
-  background-position-y: initial;
-  background-size: initial;
-  background-repeat-x: initial;
-  background-repeat-y: initial;
-  background-attachment: initial;
-  background-origin: initial;
-  background-color: initial;
+.business .business-content .clipped-text .high {
+  font-size: 7.8vw;
+  display: inline-block;
+}
+
+.business .business-content .clipped-text .mid {
+  font-size: 9vw;
+  display: inline-block;
+}
+
+.business .business-content .clipped-text .mid small {
+  font-size: 6vw;
+}
+
+.business .business-content .clipped-text .low {
+  font-size: 12vw;
+  display: inline-block;
 }
 
 .business .business-content .business-advantages {
@@ -3067,18 +3079,12 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   .promo .swipertext .swiper-wrapper .swiper-slide .slide-content .slide-title {
     font-size: 28px;
   }
-  .business .business-content .clipped-text {
-    font-size: 135px;
-  }
   .s-update-inner .left {
     width: 70%;
   }
 }
 
 @media screen and (max-width: 1399px) {
-  .business .business-content .clipped-text {
-    font-size: 125px;
-  }
   .business .business-content .business-advantages {
     padding-right: 2%;
   }
@@ -3135,9 +3141,6 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   }
   .promo .swipermain .swiper-pagination {
     left: -21%;
-  }
-  .business .business-content .clipped-text {
-    font-size: 115px;
   }
   .business .business-content .business-advantages {
     padding-right: 0;
@@ -3235,14 +3238,10 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
             flex-direction: column;
   }
   .business .business-content .clipped-text {
-    text-align: left;
     width: 100%;
-    font-size: 125px;
   }
-  .business .business-content .clipped-text span {
-    display: block;
-    text-align: right;
-    width: 100%;
+  .business .business-content .clipped-text .high {
+    font-size: 11vw;
   }
   .business .business-content .business-advantages {
     width: 100%;
@@ -3374,6 +3373,12 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   .menu .column:nth-child(1) {
     width: 30%;
   }
+  .business .business-content .clipped-text .mid {
+    font-size: 8vw;
+  }
+  .business .business-content .clipped-text .low {
+    font-size: 12vw;
+  }
   .projects .menu-links {
     width: 30%;
   }
@@ -3428,9 +3433,6 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   }
   .promo .swipertext .swiper-wrapper .swiper-slide .slide-content {
     padding: 40px;
-  }
-  .business .business-content .clipped-text {
-    font-size: 105px;
   }
   .s-update .left {
     width: 55%;
@@ -3540,9 +3542,6 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   }
   .business {
     padding: 150px 0 70px;
-  }
-  .business .business-content .clipped-text {
-    font-size: 95px;
   }
   .projects .menu-links {
     width: 40%;
@@ -3672,9 +3671,6 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   }
   .promo .swipertext .swiper-wrapper .swiper-slide .slide-content .slide-button button {
     font-size: 13px;
-  }
-  .business .business-content .clipped-text {
-    font-size: 85px;
   }
   .business .business-content .business-advantages {
     -webkit-box-orient: vertical;
@@ -3902,9 +3898,6 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   .business .business-content .business-advantages .advantage {
     width: 100%;
   }
-  .business .business-content .clipped-text {
-    font-size: 70px;
-  }
   .projects .menu__item {
     font-size: 28px;
   }
@@ -4086,8 +4079,14 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   .business {
     padding: 120px 0 70px;
   }
-  .business .business-content .clipped-text {
-    font-size: 50px;
+  .business .business-content .clipped-text .high {
+    font-size: 14vw;
+  }
+  .business .business-content .clipped-text .mid {
+    font-size: 9.9vw;
+  }
+  .business .business-content .clipped-text .low {
+    font-size: 14vw;
   }
   .big-title {
     font-size: 55px;
@@ -4230,6 +4229,9 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   }
   .nav .logo {
     left: 15vw;
+  }
+  .business .business-content .clipped-text .mid {
+    font-size: 9.5vw;
   }
   .projects .menu__item {
     font-size: 20px;
