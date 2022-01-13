@@ -3368,19 +3368,16 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
     width: 30%;
   }
   .business .business-content .clipped-text {
-    background: url(./img/redshopbag.jpg) no-repeat center center;
-    background-size: cover;
-    color: rgba(0, 0, 0, 0.0001);
-    text-align: left;
+    background: none;
+    color: #d80036;
     background-attachment: initial;
     /* -webkit-background-clip обрезает фон элемента по контуру текста */
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: #d80036;
     /* переопределяет цвет текста с белого на прозрачный в браузерах на webkit */
-    -moz-text-fill-color: transparent;
-    -ms-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -ms-background-clip: text;
-    background-clip: text;
+    -moz-text-fill-color: #d80036;
+    -ms-text-fill-color: #d80036;
+    -ms-background-clip: none;
+    background-clip: none;
   }
   .business .business-content .clipped-text .mid {
     font-size: 8vw;
