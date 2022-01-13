@@ -929,7 +929,7 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
         //     }
         // }
         .clipped-text {
-            display: flex;
+            display: inline-block;
             flex-wrap: wrap;
             background: url(./img/redshopbag.jpg) no-repeat center center;
             background-size: scroll;
@@ -949,6 +949,7 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
             width: 58%;
             overflow: hidden;
             white-space: nowrap;
+
             .high {
                 font-size: 7.8vw;
                 display: inline-block;
