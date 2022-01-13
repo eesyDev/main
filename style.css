@@ -1068,15 +1068,16 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
 }
 
 .business .business-content .clipped-text {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background: url(./img/redshopbag.jpg) no-repeat center center;
-  background: -webkit-gradient(linear, left top, right top, from(#305cea), color-stop(50%, #773de2), to(#e95370));
   background-size: scroll;
   color: rgba(0, 0, 0, 0.0001);
   text-align: left;
-  background-attachment: initial;
+  background-attachment: fixed;
   /* -webkit-background-clip обрезает фон элемента по контуру текста */
   -webkit-text-fill-color: transparent;
   /* переопределяет цвет текста с белого на прозрачный в браузерах на webkit */
@@ -3230,6 +3231,12 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .business .business-content .clipped-text {
+    width: 100%;
+  }
+  .business .business-content .clipped-text .high {
+    font-size: 11vw;
+  }
   .business .business-content .business-advantages {
     width: 100%;
     display: -webkit-box;
@@ -3359,6 +3366,27 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   }
   .menu .column:nth-child(1) {
     width: 30%;
+  }
+  .business .business-content .clipped-text {
+    background: url(./img/redshopbag.jpg) no-repeat center center;
+    background-size: cover;
+    color: rgba(0, 0, 0, 0.0001);
+    text-align: left;
+    background-attachment: initial;
+    /* -webkit-background-clip обрезает фон элемента по контуру текста */
+    -webkit-text-fill-color: transparent;
+    /* переопределяет цвет текста с белого на прозрачный в браузерах на webkit */
+    -moz-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    background-clip: text;
+  }
+  .business .business-content .clipped-text .mid {
+    font-size: 8vw;
+  }
+  .business .business-content .clipped-text .low {
+    font-size: 12vw;
   }
   .projects .menu-links {
     width: 30%;
@@ -4060,6 +4088,15 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   .business {
     padding: 120px 0 70px;
   }
+  .business .business-content .clipped-text .high {
+    font-size: 14vw;
+  }
+  .business .business-content .clipped-text .mid {
+    font-size: 9.9vw;
+  }
+  .business .business-content .clipped-text .low {
+    font-size: 14vw;
+  }
   .big-title {
     font-size: 55px;
   }
@@ -4201,6 +4238,9 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   }
   .nav .logo {
     left: 15vw;
+  }
+  .business .business-content .clipped-text .mid {
+    font-size: 9.5vw;
   }
   .projects .menu__item {
     font-size: 20px;

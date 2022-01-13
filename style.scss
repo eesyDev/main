@@ -922,23 +922,14 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
                 }
             }
         }
-        
-        // @supports not (background-attachment: fixed) {
-        //     .clipped-text {
-        //         background-attachment: initial;
-        //     }
-        // }
         .clipped-text {
-            display: inline-block;
+            display: flex;
             flex-wrap: wrap;
             background: url(./img/redshopbag.jpg) no-repeat center center;
-
-            background: -webkit-gradient(linear,left top,right top,from(#305cea),color-stop(50%,#773de2),to(#e95370));
-
             background-size: scroll;
             color: rgba(0, 0, 0, 0.0001);
             text-align: left;
-            background-attachment: initial;
+            background-attachment: fixed;
             /* -webkit-background-clip обрезает фон элемента по контуру текста */
             -webkit-text-fill-color: transparent; /* переопределяет цвет текста с белого на прозрачный в браузерах на webkit */
             -moz-text-fill-color: transparent;
@@ -2589,12 +2580,12 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
         padding: 200px 0 80px;
         .business-content {
             flex-direction: column;
-            // .clipped-text {
-            //     width: 100%;
-            //     .high {
-            //         font-size: 11vw;
-            //     }
-            // }
+            .clipped-text {
+                width: 100%;
+                .high {
+                    font-size: 11vw;
+                }
+            }
             .business-advantages {
                 width: 100%;
                 display: flex;
@@ -2750,26 +2741,26 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
     .business {
         .business-content {
             .clipped-text {
-                // background: url(./img/redshopbag.jpg) no-repeat center center;
-                // background-size: cover;
-                // color: rgba(0, 0, 0, 0.0001);
-                // text-align: left;
-                // background-attachment: initial;
+                background: url(./img/redshopbag.jpg) no-repeat center center;
+                background-size: cover;
+                color: rgba(0, 0, 0, 0.0001);
+                text-align: left;
+                background-attachment: initial;
 
-                // /* -webkit-background-clip обрезает фон элемента по контуру текста */
-                // -webkit-text-fill-color: transparent; /* переопределяет цвет текста с белого на прозрачный в браузерах на webkit */
-                // -moz-text-fill-color: transparent;
-                // -ms-text-fill-color: transparent;
-                // -webkit-background-clip: text;
-                // -moz-background-clip: text;
-                // -ms-background-clip: text;
-                // background-clip: text;
-                // .mid {
-                //     font-size: 8vw;
-                // }
-                // .low {
-                //     font-size: 12vw;
-                // }
+                /* -webkit-background-clip обрезает фон элемента по контуру текста */
+                -webkit-text-fill-color: transparent; /* переопределяет цвет текста с белого на прозрачный в браузерах на webkit */
+                -moz-text-fill-color: transparent;
+                -ms-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                -ms-background-clip: text;
+                background-clip: text;
+                .mid {
+                    font-size: 8vw;
+                }
+                .low {
+                    font-size: 12vw;
+                }
             }
         }
     }
@@ -3620,17 +3611,17 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
     .business {
         padding: 120px 0 70px;
         .business-content {
-            // .clipped-text {
-            //     .high {
-            //         font-size: 14vw;
-            //     }
-            //     .mid {
-            //         font-size: 9.9vw;
-            //     }
-            //     .low {
-            //         font-size: 14vw;
-            //     }
-            // }
+            .clipped-text {
+                .high {
+                    font-size: 14vw;
+                }
+                .mid {
+                    font-size: 9.9vw;
+                }
+                .low {
+                    font-size: 14vw;
+                }
+            }
         }
     }
     .big-title {
@@ -3808,11 +3799,11 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
     }
     .business {
         .business-content {
-            // .clipped-text {
-            //     .mid {
-            //         font-size: 9.5vw;
-            //     }
-            // }
+            .clipped-text {
+                .mid {
+                    font-size: 9.5vw;
+                }
+            }
         }
     }
     .projects {
