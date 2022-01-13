@@ -932,6 +932,9 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
             display: inline-block;
             flex-wrap: wrap;
             background: url(./img/redshopbag.jpg) no-repeat center center;
+
+            background: -webkit-gradient(linear,left top,right top,from(#305cea),color-stop(50%,#773de2),to(#e95370));
+
             background-size: scroll;
             color: rgba(0, 0, 0, 0.0001);
             text-align: left;
