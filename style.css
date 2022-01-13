@@ -1067,12 +1067,6 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
           mask: url(#mask);
 }
 
-@supports not (background-attachment: fixed) {
-  .business .business-content .clipped-text {
-    background-attachment: initial;
-  }
-}
-
 .business .business-content .clipped-text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1083,7 +1077,7 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   background-size: cover;
   color: rgba(0, 0, 0, 0.0001);
   text-align: left;
-  background-attachment: fixed;
+  background-attachment: initial;
   /* -webkit-background-clip обрезает фон элемента по контуру текста */
   -webkit-text-fill-color: transparent;
   /* переопределяет цвет текста с белого на прозрачный в браузерах на webkit */
@@ -3372,9 +3366,6 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   }
   .menu .column:nth-child(1) {
     width: 30%;
-  }
-  .business .business-content .clipped-text {
-    background-attachment: initial;
   }
   .business .business-content .clipped-text .mid {
     font-size: 8vw;

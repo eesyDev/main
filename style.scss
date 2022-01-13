@@ -923,11 +923,11 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
             }
         }
         
-        @supports not (background-attachment: fixed) {
-            .clipped-text {
-                background-attachment: initial;
-            }
-        }
+        // @supports not (background-attachment: fixed) {
+        //     .clipped-text {
+        //         background-attachment: initial;
+        //     }
+        // }
         .clipped-text {
             display: flex;
             flex-wrap: wrap;
@@ -935,7 +935,7 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
             background-size: cover;
             color: rgba(0, 0, 0, 0.0001);
             text-align: left;
-            background-attachment: fixed;
+            background-attachment: initial;
             /* -webkit-background-clip обрезает фон элемента по контуру текста */
             -webkit-text-fill-color: transparent; /* переопределяет цвет текста с белого на прозрачный в браузерах на webkit */
             -moz-text-fill-color: transparent;
@@ -2750,7 +2750,7 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
                 // background-size: cover;
                 // color: rgba(0, 0, 0, 0.0001);
                 // text-align: left;
-                background-attachment: initial;
+                // background-attachment: initial;
 
                 // /* -webkit-background-clip обрезает фон элемента по контуру текста */
                 // -webkit-text-fill-color: transparent; /* переопределяет цвет текста с белого на прозрачный в браузерах на webkit */
