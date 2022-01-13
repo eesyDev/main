@@ -3373,6 +3373,9 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   .menu .column:nth-child(1) {
     width: 30%;
   }
+  .business .business-content .clipped-text {
+    background-attachment: initial;
+  }
   .business .business-content .clipped-text .mid {
     font-size: 8vw;
   }
