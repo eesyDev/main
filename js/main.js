@@ -1,3 +1,8 @@
+document.addEventListener('DOMContentLoaded', () => {
+
+const observer = lozad();
+observer.observe();
+
 const windowWidth = window.innerWidth;
 const mainSwiper = new Swiper('.swipermain', {
     loop: true,
@@ -66,7 +71,7 @@ if(windowWidth <= 475) {
 };
 
 
-// document.addEventListener('DOMContentLoaded', () => {
+
 const projectSwiper = new Swiper('.swiperproject', {
     loop: true,
     effect: 'coverflow',
@@ -709,4 +714,4 @@ function changeMedia () {
 };
 changeMedia();
 
-// });
+});
