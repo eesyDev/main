@@ -3231,12 +3231,6 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .business .business-content .clipped-text {
-    width: 100%;
-  }
-  .business .business-content .clipped-text .high {
-    font-size: 11vw;
-  }
   .business .business-content .business-advantages {
     width: 100%;
     display: -webkit-box;
@@ -3366,12 +3360,6 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   }
   .menu .column:nth-child(1) {
     width: 30%;
-  }
-  .business .business-content .clipped-text .mid {
-    font-size: 8vw;
-  }
-  .business .business-content .clipped-text .low {
-    font-size: 12vw;
   }
   .projects .menu-links {
     width: 30%;
@@ -4073,15 +4061,6 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   .business {
     padding: 120px 0 70px;
   }
-  .business .business-content .clipped-text .high {
-    font-size: 14vw;
-  }
-  .business .business-content .clipped-text .mid {
-    font-size: 9.9vw;
-  }
-  .business .business-content .clipped-text .low {
-    font-size: 14vw;
-  }
   .big-title {
     font-size: 55px;
   }
@@ -4223,9 +4202,6 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
   }
   .nav .logo {
     left: 15vw;
-  }
-  .business .business-content .clipped-text .mid {
-    font-size: 9.5vw;
   }
   .projects .menu__item {
     font-size: 20px;

@@ -2585,12 +2585,12 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
         padding: 200px 0 80px;
         .business-content {
             flex-direction: column;
-            .clipped-text {
-                width: 100%;
-                .high {
-                    font-size: 11vw;
-                }
-            }
+            // .clipped-text {
+            //     width: 100%;
+            //     .high {
+            //         font-size: 11vw;
+            //     }
+            // }
             .business-advantages {
                 width: 100%;
                 display: flex;
@@ -2760,12 +2760,12 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
                 // -moz-background-clip: text;
                 // -ms-background-clip: text;
                 // background-clip: text;
-                .mid {
-                    font-size: 8vw;
-                }
-                .low {
-                    font-size: 12vw;
-                }
+                // .mid {
+                //     font-size: 8vw;
+                // }
+                // .low {
+                //     font-size: 12vw;
+                // }
             }
         }
     }
@@ -3616,17 +3616,17 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
     .business {
         padding: 120px 0 70px;
         .business-content {
-            .clipped-text {
-                .high {
-                    font-size: 14vw;
-                }
-                .mid {
-                    font-size: 9.9vw;
-                }
-                .low {
-                    font-size: 14vw;
-                }
-            }
+            // .clipped-text {
+            //     .high {
+            //         font-size: 14vw;
+            //     }
+            //     .mid {
+            //         font-size: 9.9vw;
+            //     }
+            //     .low {
+            //         font-size: 14vw;
+            //     }
+            // }
         }
     }
     .big-title {
@@ -3804,11 +3804,11 @@ textarea, input[type="text"], input[type="button"], input[type="submit"] {
     }
     .business {
         .business-content {
-            .clipped-text {
-                .mid {
-                    font-size: 9.5vw;
-                }
-            }
+            // .clipped-text {
+            //     .mid {
+            //         font-size: 9.5vw;
+            //     }
+            // }
         }
     }
     .projects {
